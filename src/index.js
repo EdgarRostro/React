@@ -101,7 +101,7 @@ import './index.css';
         const desc = move ? 'Go to move #' + move : 'Go to game start';
         return (
           <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
+            <button class="buttonMove" onClick={() => this.jumpTo(move)}>{desc}</button>
           </li>
         );
       });

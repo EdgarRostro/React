@@ -1,12 +1,16 @@
 body {
     background-color: gray;
     font: 14px, "Century Gothic", Futura, sans-serif;
-    font-style: white;
+    color: white;
     margin: 20px;
   }
   
   ol, ul {
     padding-left: 30px;
+  }
+
+  .buttonMove{
+    color: gray;
   }
   
   .board-row:after {
@@ -32,6 +36,7 @@ body {
     padding: 0;
     text-align: center;
     width: 34px;
+    color: #008ae6;
   }
   
   .square:focus {
