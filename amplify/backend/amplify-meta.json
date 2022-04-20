@@ -1,0 +1,139 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-recorder-dev-125622-authRole",
+      "UnauthRoleArn": "arn:aws:iam::688487247453:role/amplify-recorder-dev-125622-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::688487247453:role/amplify-recorder-dev-125622-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-recorder-dev-125622-deployment",
+      "UnauthRoleName": "amplify-recorder-dev-125622-unauthRole",
+      "StackName": "amplify-recorder-dev-125622",
+      "StackId": "arn:aws:cloudformation:us-east-1:688487247453:stack/amplify-recorder-dev-125622/e0a82bc0-b5d2-11ec-a14d-0a9ad4b183a3",
+      "AmplifyAppId": "dw04sposyo9am"
+    }
+  },
+  "auth": {
+    "recorder": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "customAuth": false,
+      "frontendAuthConfig": {
+        "socialProviders": [],
+        "usernameAttributes": [
+          "EMAIL"
+        ],
+        "signupAttributes": [],
+        "passwordProtectionSettings": {
+          "passwordPolicyMinLength": 8,
+          "passwordPolicyCharacters": [
+            "REQUIRES_LOWERCASE",
+            "REQUIRES_NUMBERS",
+            "REQUIRES_SYMBOLS",
+            "REQUIRES_UPPERCASE"
+          ]
+        },
+        "mfaConfiguration": "OFF",
+        "mfaTypes": [
+          "SMS"
+        ],
+        "verificationMechanisms": [
+          "EMAIL"
+        ]
+      },
+      "output": {
+        "UserPoolId": "us-east-1_nz10UmT54",
+        "AppClientIDWeb": "22r5cc2idgohs4un9qtgkatoib",
+        "AppClientID": "5tvgros0qd58rlh9jv7bp2f8qu",
+        "IdentityPoolId": "us-east-1:d01da2c5-53db-4c6f-a916-fb2688f5523c",
+        "UserPoolArn": "arn:aws:cognito-idp:us-east-1:688487247453:userpool/us-east-1_nz10UmT54",
+        "IdentityPoolName": "testAuthIdentityPool__dev",
+        "UserPoolName": "recorder"
+      },
+      "lastPushTimeStamp": "2022-04-06T20:08:00.604Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recorder-dev-125622-deployment/amplify-cfn-templates/auth/recorder-cloudformation-template.json",
+        "logicalId": "authrecorder"
+      },
+      "lastPushDirHash": "LECBgWhu8DYp4VxxiJW2luUQWlg="
+    }
+  },
+  "function": {
+    "nodeFunction": {
+      "build": true,
+      "providerPlugin": "awscloudformation",
+      "service": "Lambda",
+      "output": {
+        "Region": "us-east-1",
+        "Arn": "arn:aws:lambda:us-east-1:688487247453:function:nodeFunction-dev",
+        "Name": "nodeFunction-dev",
+        "LambdaExecutionRole": "recorderLambdaRole071a94b9-dev"
+      },
+      "lastPushTimeStamp": "2022-04-06T20:08:00.607Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recorder-dev-125622-deployment/amplify-cfn-templates/function/nodeFunction-cloudformation-template.json",
+        "logicalId": "functionnodeFunction"
+      },
+      "s3Bucket": {
+        "deploymentBucketName": "amplify-recorder-dev-125622-deployment",
+        "s3Key": "amplify-builds/nodeFunction-576c703578414b2f6344-build.zip"
+      }
+    }
+  },
+  "api": {
+    "nodeApi": {
+      "service": "API Gateway",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "function",
+          "resourceName": "nodeFunction",
+          "attributes": [
+            "Name",
+            "Arn"
+          ]
+        }
+      ],
+      "output": {
+        "ApiName": "nodeApi",
+        "RootUrl": "https://zfp5pdghvf.execute-api.us-east-1.amazonaws.com/dev",
+        "ApiId": "zfp5pdghvf"
+      },
+      "lastPushTimeStamp": "2022-04-06T20:08:00.609Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recorder-dev-125622-deployment/amplify-cfn-templates/api/nodeApi-cloudformation-template.json",
+        "logicalId": "apinodeApi"
+      }
+    }
+  },
+  "hosting": {
+    "amplifyhosting": {
+      "service": "amplifyhosting",
+      "providerPlugin": "awscloudformation",
+      "type": "manual",
+      "output": {},
+      "lastPushTimeStamp": "2022-04-06T20:08:00.610Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recorder-dev-125622-deployment/amplify-cfn-templates/hosting/amplifyhosting-template.json",
+        "logicalId": "hostingamplifyhosting"
+      }
+    }
+  },
+  "storage": {
+    "s3screenrecorderstorage1ffe6405": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [],
+      "lastPushTimeStamp": "2022-04-06T20:08:01.266Z",
+      "providerMetadata": {
+        "s3TemplateURL": "https://s3.amazonaws.com/amplify-recorder-dev-125622-deployment/amplify-cfn-templates/storage/cloudformation-template.json",
+        "logicalId": "storages3screenrecorderstorage1ffe6405"
+      },
+      "output": {
+        "BucketName": "screen-recorder-storage-1ffe6405125622-dev",
+        "Region": "us-east-1"
+      },
+      "lastPushDirHash": "hXDataJZhDgsHzgxZav/mun6GHQ="
+    }
+  }
+}

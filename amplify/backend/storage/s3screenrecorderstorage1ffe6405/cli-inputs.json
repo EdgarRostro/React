@@ -1,0 +1,16 @@
+{
+  "resourceName": "s3screenrecorderstorage1ffe6405",
+  "bucketName": "screen-recorder-storage-1ffe6405",
+  "policyUUID": "64b0979f",
+  "storageAccess": "authAndGuest",
+  "guestAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ],
+  "authAccess": [
+    "CREATE_AND_UPDATE",
+    "READ",
+    "DELETE"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-recorder-dev-125622-authRole",
+      "UnauthRoleArn": "arn:aws:iam::688487247453:role/amplify-recorder-dev-125622-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::688487247453:role/amplify-recorder-dev-125622-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-recorder-dev-125622-deployment",
+      "UnauthRoleName": "amplify-recorder-dev-125622-unauthRole",
+      "StackName": "amplify-recorder-dev-125622",
+      "StackId": "arn:aws:cloudformation:us-east-1:688487247453:stack/amplify-recorder-dev-125622/e0a82bc0-b5d2-11ec-a14d-0a9ad4b183a3",
+      "AmplifyAppId": "dw04sposyo9am"
+    },
+    "categories": {
+      "function": {
+        "nodeFunction": {
+          "deploymentBucketName": "amplify-recorder-dev-125622-deployment",
+          "s3Key": "amplify-builds/nodeFunction-576c703578414b2f6344-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dw04sposyo9am",
+          "type": "manual"
+        }
+      },
+      "auth": {
+        "recorder": {}
+      }
+    }
+  }
+}
